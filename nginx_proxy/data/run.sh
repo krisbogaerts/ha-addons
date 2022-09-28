@@ -49,8 +49,8 @@ sed -i "s/%%DOMAIN%%/$DOMAIN/g" /etc/nginx.conf
 sed -i "s/%%HA_PORT%%/$HA_PORT/g" /etc/nginx.conf
 
 # Redirect log output to the add-on log
-sed -i 's#/var/log/nginx/access.log#/proc/1/fd/1#g' /etc/nginx/nginx.conf
-sed -i 's#/var/log/nginx/error.log#/proc/1/fd/1#g' /etc/nginx/nginx.conf
+sed -i 's#/var/log/nginx/access.log#/proc/1/fd/1#g' /etc/nginx.conf
+sed -i 's#/var/log/nginx/error.log#/proc/1/fd/1#g' /etc/nginx.conf
 
 [ -n "$HSTS" ] && HSTS="add_header Strict-Transport-Security \"$HSTS\" always;"
 sed -i "s/%%HSTS%%/$HSTS/g" /etc/nginx.conf
