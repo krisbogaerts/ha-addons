@@ -29,6 +29,9 @@ options:
 ports:
   443/tcp: 443
   80/tcp: null
+ports_description:
+  80/tcp: HTTP Entrance port
+  443/tcp: HTTPS/SSL Entrance port
 schema:
   domain: str
   hsts: str
